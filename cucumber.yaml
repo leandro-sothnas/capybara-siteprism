@@ -1,0 +1,11 @@
+---
+default: -p prd -p chrome -p html -p pretty
+report: -p chrome -p html -p pretty
+prd: ENV_TYPE=prd
+chrome: BROWSER=chrome
+headless: BROWSER=headless
+iphone: BROWSER=iphone
+html: --format html --out=log/report.html
+json: --format json --out=log/report.json
+pretty: --format pretty
+progress: --format progress
