@@ -9,14 +9,14 @@ Funcionalidade: Produto
     Contexto: Pagina do produto
         Dado que eu acesso a pagina do produto
 
-@smoke
+
     Esquema do Cenario: Mudar quantidade do produto com sucesso
         Quando mudo a quantidade do produto para "<quantidade>"
         Então ao adicionar no carrinho vejo a "<quantidade>"
 
         Exemplos:
             | quantidade |
-            | 01         |
+            # | 01         |
             | 1          |
             | 1234567890 |
             | 4294967295 |
@@ -24,7 +24,7 @@ Funcionalidade: Produto
 
     Esquema do Cenario: Mudar quantidade do produto com erro
         Quando mudo a quantidade do produto para "<quantidade>"
-        Então ao adicionar no carrinho vejo erro "<mensagem>"
+        Então ao adicionar no carrinho vejo o erro "<mensagem>"
 
         Exemplos:
             | quantidade | mensagem       |
@@ -35,7 +35,7 @@ Funcionalidade: Produto
 
     Esquema do Cenario: Selecionar o tamanho do produto
         Quando mudo o tamanho do produto para "<tamanho>"
-        Então ao adicionar no carrinho vejo a "<especificacao>"
+        Então ao adicionar no carrinho vejo esta "<especificacao>"
 
         Exemplos:
             | tamanho | especificacao |
@@ -46,7 +46,7 @@ Funcionalidade: Produto
 
     Esquema do Cenario: Selecionar a cor do produto
         Quando mudo a cor do produto para "<cor>"
-        Então ao adicionar no carrinho vejo a "<especificacao>"
+        Então ao adicionar no carrinho vejo esta "<especificacao>"
 
         Exemplos:
             | cor    | especificacao |
@@ -58,7 +58,7 @@ Funcionalidade: Produto
 
     Esquema do Cenario: Selecionar o tamanho e cor do produto
         Quando mudo o "<tamanho>" e "<cor>"
-        Então ao adicionar no carrinho vejo a "<especificacao>"
+        Então ao adicionar no carrinho vejo esta "<especificacao>"
 
         Exemplos:
             | tamanho | cor    | especificacao |
@@ -69,19 +69,19 @@ Funcionalidade: Produto
             | S       | Black  | Black, S      |
             | S       | Orange | Orange, S     |
 
-
+@smoke
     Esquema do Cenario: Selecionar a quantidade o tamanho e cor do produto
         Quando mudo a "<quantidade>" o "<tamanho>" e a "<cor>"
         Então ao adicionar no carrinho vejo a "<quantidade>" e a "<especificacao>"
 
         Exemplos:
             | quantidade | tamanho | cor    | especificacao |
-            | 01         | S       | Blue   | Blue, S       |
+            # | 01         | S       | Blue   | Blue, S       |
             | 1          | S       | Yellow | Yellow, S     |
             | 1234567890 | S       | Yellow | Yellow, S     |
             | 4294967295 | S       | Yellow | Yellow, S     |
             | 1          | M       | Yellow | Yellow, M     |
             | 1          | L       | Yellow | Yellow, L     |
-            | 1          | S       | Blue   | Blue, L       |
+            | 1          | S       | Blue   | Blue, S       |
             | 1          | S       | Black  | Black, S      |
             | 1          | S       | Orange | Orange, S     |
