@@ -9,17 +9,17 @@ Funcionalidade: Produto
     Contexto: Pagina do produto
         Dado que eu acesso a pagina do produto
 
-
+@smoke
     Esquema do Cenario: Mudar quantidade do produto com sucesso
         Quando mudo a quantidade do produto para "<quantidade>"
-        Então ao adicionar no carrinho vejo a "<mensagem>" e a "<quantidade>"
+        Então ao adicionar no carrinho vejo a "<quantidade>"
 
         Exemplos:
-            | quantidade | mensagem                                         |
-            | 1          | Product successfully added to your shopping cart |
-            # | 01          | Product successfully added to your shopping cart |
-            | 1234567890 | Product successfully added to your shopping cart |
-            | 4294967295 | Product successfully added to your shopping cart |
+            | quantidade |
+            | 01         |
+            | 1          |
+            | 1234567890 |
+            | 4294967295 |
 
 
     Esquema do Cenario: Mudar quantidade do produto com erro
@@ -32,56 +32,56 @@ Funcionalidade: Produto
             | abc        | Null quantity. |
             | 0,9        | Null quantity. |
 
-@smoke
+
     Esquema do Cenario: Selecionar o tamanho do produto
         Quando mudo o tamanho do produto para "<tamanho>"
-        Então ao adicionar no carrinho vejo a "<mensagem>" e o "<especificacao>"
+        Então ao adicionar no carrinho vejo a "<especificacao>"
 
         Exemplos:
-            | tamanho | mensagem                                         | especificacao |
-            | S       | Product successfully added to your shopping cart | Yellow, S     |
-            | M       | Product successfully added to your shopping cart | Yellow, M     |
-            | L       | Product successfully added to your shopping cart | Yellow, L     |
+            | tamanho | especificacao |
+            | S       | Yellow, S     |
+            | M       | Yellow, M     |
+            | L       | Yellow, L     |
 
 
     Esquema do Cenario: Selecionar a cor do produto
         Quando mudo a cor do produto para "<cor>"
-        Então ao adicionar no carrinho vejo a "<mensagem>" e a "<especificacao>"
+        Então ao adicionar no carrinho vejo a "<especificacao>"
 
         Exemplos:
-            | cor    | mensagem                                         | especificacao |
-            | Yellow | Product successfully added to your shopping cart | Yellow, S     |
-            | Blue   | Product successfully added to your shopping cart | Blue, S       |
-            | Black  | Product successfully added to your shopping cart | Black, S      |
-            | Orange | Product successfully added to your shopping cart | Orange, S     |
+            | cor    | especificacao |
+            | Yellow | Yellow, S     |
+            | Blue   | Blue, S       |
+            | Black  | Black, S      |
+            | Orange | Orange, S     |
 
 
     Esquema do Cenario: Selecionar o tamanho e cor do produto
         Quando mudo o "<tamanho>" e "<cor>"
-        Então ao adicionar no carrinho vejo a "<mensagem>" e a "<especificacao>"
+        Então ao adicionar no carrinho vejo a "<especificacao>"
 
         Exemplos:
-            | tamanho | cor    | mensagem                                         | especificacao |
-            | S       | Yellow | Product successfully added to your shopping cart | Yellow, S     |
-            | M       | Yellow | Product successfully added to your shopping cart | Yellow, M     |
-            | L       | Yellow | Product successfully added to your shopping cart | Yellow, L     |
-            | S       | Blue   | Product successfully added to your shopping cart | Blue, S       |
-            | S       | Black  | Product successfully added to your shopping cart | Black, S      |
-            | S       | Orange | Product successfully added to your shopping cart | Orange, S     |
+            | tamanho | cor    | especificacao |
+            | S       | Yellow | Yellow, S     |
+            | M       | Yellow | Yellow, M     |
+            | L       | Yellow | Yellow, L     |
+            | S       | Blue   | Blue, S       |
+            | S       | Black  | Black, S      |
+            | S       | Orange | Orange, S     |
 
 
-    Esquema do Cenario: Selecionar o tamanho e cor do produto
-        Quando mudo o "<tamanho>" e a "<cor>"
-        Então ao adicionar no carrinho vejo a "<mensagem>" a "<quantidade>" e a "<especificacao>"
+    Esquema do Cenario: Selecionar a quantidade o tamanho e cor do produto
+        Quando mudo a "<quantidade>" o "<tamanho>" e a "<cor>"
+        Então ao adicionar no carrinho vejo a "<quantidade>" e a "<especificacao>"
 
         Exemplos:
-            | quantidade | tamanho | cor    | mensagem                                         | especificacao |
-            # |01 | S       | Blue   | Product successfully added to your shopping cart | Blue, S       |
-            | 1          | S       | Yellow | Product successfully added to your shopping cart | Yellow, S     |
-            | 1234567890 | S       | Yellow | Product successfully added to your shopping cart | Yellow, S     |
-            | 4294967295 | S       | Yellow | Product successfully added to your shopping cart | Yellow, S     |
-            | 1          | M       | Yellow | Product successfully added to your shopping cart | Yellow, M     |
-            | 1          | L       | Yellow | Product successfully added to your shopping cart | Yellow, L     |
-            | 1          | S       | Blue   | Product successfully added to your shopping cart | Blue, L       |
-            | 1          | S       | Black  | Product successfully added to your shopping cart | Black, S      |
-            | 1          | S       | Orange | Product successfully added to your shopping cart | Orange, S     |
+            | quantidade | tamanho | cor    | especificacao |
+            | 01         | S       | Blue   | Blue, S       |
+            | 1          | S       | Yellow | Yellow, S     |
+            | 1234567890 | S       | Yellow | Yellow, S     |
+            | 4294967295 | S       | Yellow | Yellow, S     |
+            | 1          | M       | Yellow | Yellow, M     |
+            | 1          | L       | Yellow | Yellow, L     |
+            | 1          | S       | Blue   | Blue, L       |
+            | 1          | S       | Black  | Black, S      |
+            | 1          | S       | Orange | Orange, S     |
