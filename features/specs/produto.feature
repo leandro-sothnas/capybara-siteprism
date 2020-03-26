@@ -35,25 +35,25 @@ Funcionalidade: Produto
 @smoke
     Esquema do Cenario: Selecionar o tamanho do produto
         Quando mudo o tamanho do produto para "<tamanho>"
-        Então ao adicionar no carrinho vejo a "<mensagem>" e o "<tamanho>"
+        Então ao adicionar no carrinho vejo a "<mensagem>" e o "<especificacao>"
 
         Exemplos:
-            | tamanho     | mensagem                                         |
-            | Yellow, L   | Product successfully added to your shopping cart |
-            | Yellow, M   | Product successfully added to your shopping cart |
-            | Yellow, S   | Product successfully added to your shopping cart |
+            | tamanho | mensagem                                         | especificacao |
+            | S       | Product successfully added to your shopping cart | Yellow, S     |
+            | M       | Product successfully added to your shopping cart | Yellow, M     |
+            | L       | Product successfully added to your shopping cart | Yellow, L     |
 
 
     Esquema do Cenario: Selecionar a cor do produto
         Quando mudo a cor do produto para "<cor>"
-        Então ao adicionar no carrinho vejo a "<mensagem>" e a "<cor>"
+        Então ao adicionar no carrinho vejo a "<mensagem>" e a "<especificacao>"
 
         Exemplos:
-            | cor       | mensagem                                         |
-            | Black, S  | Product successfully added to your shopping cart |
-            | Orange, S | Product successfully added to your shopping cart |
-            | Blue, S   | Product successfully added to your shopping cart |
-            | Yellow, S | Product successfully added to your shopping cart |
+            | cor    | mensagem                                         | especificacao |
+            | Yellow | Product successfully added to your shopping cart | Yellow, S     |
+            | Blue   | Product successfully added to your shopping cart | Blue, S       |
+            | Black  | Product successfully added to your shopping cart | Black, S      |
+            | Orange | Product successfully added to your shopping cart | Orange, S     |
 
 
     Esquema do Cenario: Selecionar o tamanho e cor do produto
@@ -62,12 +62,12 @@ Funcionalidade: Produto
 
         Exemplos:
             | tamanho | cor    | mensagem                                         | especificacao |
+            | S       | Yellow | Product successfully added to your shopping cart | Yellow, S     |
+            | M       | Yellow | Product successfully added to your shopping cart | Yellow, M     |
+            | L       | Yellow | Product successfully added to your shopping cart | Yellow, L     |
             | S       | Blue   | Product successfully added to your shopping cart | Blue, S       |
-            | M       | Blue   | Product successfully added to your shopping cart | Blue, M       |
-            | L       | Blue   | Product successfully added to your shopping cart | Blue, L       |
             | S       | Black  | Product successfully added to your shopping cart | Black, S      |
             | S       | Orange | Product successfully added to your shopping cart | Orange, S     |
-            | S       | Yellow | Product successfully added to your shopping cart | Yellow, S     |
 
 
     Esquema do Cenario: Selecionar o tamanho e cor do produto
@@ -77,11 +77,11 @@ Funcionalidade: Produto
         Exemplos:
             | quantidade | tamanho | cor    | mensagem                                         | especificacao |
             # |01 | S       | Blue   | Product successfully added to your shopping cart | Blue, S       |
-            | 1234567890 | S       | Blue   | Product successfully added to your shopping cart | Blue, S       |
-            | 4294967295 | S       | Blue   | Product successfully added to your shopping cart | Blue, S       |
-            | 1          | L       | Blue   | Product successfully added to your shopping cart | Blue, S       |
-            | 1          | M       | Blue   | Product successfully added to your shopping cart | Blue, M       |
+            | 1          | S       | Yellow | Product successfully added to your shopping cart | Yellow, S     |
+            | 1234567890 | S       | Yellow | Product successfully added to your shopping cart | Yellow, S     |
+            | 4294967295 | S       | Yellow | Product successfully added to your shopping cart | Yellow, S     |
+            | 1          | M       | Yellow | Product successfully added to your shopping cart | Yellow, M     |
+            | 1          | L       | Yellow | Product successfully added to your shopping cart | Yellow, L     |
             | 1          | S       | Blue   | Product successfully added to your shopping cart | Blue, L       |
             | 1          | S       | Black  | Product successfully added to your shopping cart | Black, S      |
             | 1          | S       | Orange | Product successfully added to your shopping cart | Orange, S     |
-            | 1          | S       | Yellow | Product successfully added to your shopping cart | Yellow, S     |

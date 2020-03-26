@@ -10,14 +10,18 @@ Então('ao adicionar no carrinho vejo erro {string}') do |mensagem|
   expect(@produto_page.verifica_msg_erro).to have_content(mensagem)
 end
 
-Então('ao adicionar no carrinho vejo a {string} e a {string}') do |mensagem, quantidade|
-  # qtd = quantidade.sub!('^0+', '')
-  # expect(@produto_page.verifica_msg_carrinho).to have_content(qtd, mensagem)
-  expect(@produto_page.verifica_msg_carrinho).to have_content(mensagem, quantidade)
-end
-
 Quando('mudo o tamanho do produto para {string}') do |tamanho|
   @produto_page.mudar_tamanho(tamanho)
+end
+
+Quando('mudo a cor do produto para {string}') do |cor|
+  @produto_page.mudar_cor(cor)
+end
+
+Então('ao adicionar no carrinho vejo a {string} e a {string}') do |mensagem, especificacao|
+  # qtd = quantidade.sub!('^0+', '')
+  # expect(@produto_page.verifica_msg_carrinho).to have_content(qtd, mensagem)
+  expect(@produto_page.verifica_msg_carrinho).to have_content(mensagem, especificacao)
 end
 
 Então('ao adicionar no carrinho vejo a {string} e o {string}') do |mensagem, tamanho|

@@ -4,7 +4,8 @@ class ProdutoPage < SitePrism::Page
   set_url '/index.php?id_product=5&controller=product'
 
   # section :produto, ProdutoSection, '#center_column'
-  section :produto, ProdutoSection, '.box-info-product'
+  # section :produto, ProdutoSection, '.box-info-product'
+  section :produto, ProdutoSection, '#buy_block'
   section :produto_cart, ProdutoSection, '#layer_cart'
   section :produto_cart_er, ProdutoSection, '.fancybox-inner'
   # section :produto_select, ProdutoSection, '#uniform-group_1'
@@ -19,7 +20,7 @@ class ProdutoPage < SitePrism::Page
 
   def mudar_tamanho(tamanho)
     # produto.size_select.first('option', text: tamanho).select_option
-    # produto_select.size_select.first('option', text: tamanho).select_option
+    # produto.size_select.first('title', text: tamanho).select_option
     produto.size_select.select(tamanho)
   end
 
