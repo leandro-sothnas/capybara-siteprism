@@ -8,7 +8,7 @@ Funcionalidade: Compra
     Contexto: Pagina de principal
         Dado que estou na pagina da loja
 
-@smoke
+
     Cenario: Buscar produto com resultados
 
             Quando busco por um produto

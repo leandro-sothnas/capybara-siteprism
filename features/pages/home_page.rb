@@ -1,4 +1,4 @@
-require_relative '../sections/home_section'
+require_relative '../sections/produto_section'
 
 # class home
 class HomePage < SitePrism::Page
