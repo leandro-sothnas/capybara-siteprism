@@ -1,23 +1,23 @@
-require_relative '../sections/produto_section'
+require_relative '../sections/product_section'
 
 # class home
 class HomePage < SitePrism::Page
   set_url '/'
 
-  section :home_top, ProdutoSection, '.header-container'
-  section :home_center, ProdutoSection, '#center_column'
+  section :home_top, ProductSection, '.header-container'
+  section :home_center, ProductSection, '#center_column'
 
   # metodo para fazer busca
-  def buscar(produto)
-    home_top.campo_busca.set(produto)
+  def search_product(product)
+    home_top.input_search.set(product)
   end
 
-  def verifica_mensagem
+  def verify_message
     home_top.button_search.click
-    home_center.alerta_busca
+    home_center.alert_search
   end
 
-  def verifica_produto
+  def verify_product
     home_top.button_search.click
     home_center.product_list
   end

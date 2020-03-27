@@ -16,10 +16,10 @@ Funcionalidade: Novo Usuario
 
         Dado que eu acesso a pagina autenticacao
         Quando preencho o email com "<email>"
-        Então vejo a mensagem de alerta "<mensagem>"
+        Então vejo a mensagem de alerta "<message>"
 
         Exemplos:
-            | email                   | mensagem                                                                                                             |
+            | email                   | message                                                                                                             |
             |                         | Invalid email address.                                                                                               |
             | @email.com              | Invalid email address.                                                                                               |
             | a.com                   | Invalid email address.                                                                                               |

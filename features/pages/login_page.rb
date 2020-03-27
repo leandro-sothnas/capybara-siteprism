@@ -6,19 +6,19 @@ class LoginPage < SitePrism::Page
   section :authentication, AuthenticationSection, '#center_column'
 
   ## metodo para fazer login
-  def logar(email, senha)
-    authentication.email_.set(email)
-    authentication.senha_.set(senha)
-    authentication.sign_in.click
+  def login_in(email, password)
+    authentication.input_email.set(email)
+    authentication.input_passwd.set(password)
+    authentication.button_login.click
   end
 
   ## metodo para verificar mensagem de boas vindas
-  def mensagem
-    authentication.mensagem_
+  def welcome_message
+    authentication.welcome_msg
   end
 
   ## metodo para verificar mensagem de alerta
-  def alerta
-    authentication.login_alert
+  def alert_login
+    authentication.alert_login
   end
 end

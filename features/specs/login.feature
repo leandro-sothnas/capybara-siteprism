@@ -17,11 +17,11 @@ Posso acessar o sistema com meu email e senha previamente cadastrado.
 
     Esquema do Cenario: Tentativa de login
 
-        Quando faco login com "<email>" e "<senha>"
-        Entao vejo a mensagem de alerta "<mensagem>"
+        Quando faco login com "<email>" e "<password>"
+        Entao vejo a mensagem de alerta "<message>"
 
         Exemplos:
-            | email                   | senha     | mensagem                   |
+            | email                   | password  | message                    |
             | testeCucumber@email.com | 1111111aa | Authentication failed.     |
             | testar987@email.com     | 123456tC  | Authentication failed.     |
             |                         | 123456tC  | An email address required. |
